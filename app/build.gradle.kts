@@ -79,10 +79,9 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
 
     // Room Database (La Memoria y Catálogo SQLite)
-    val room_version = "2.6.1"
-    implementation("androidx.room:room-runtime:\$room_version")
-    implementation("androidx.room:room-ktx:\$room_version")
-    kapt("androidx.room:room-compiler:\$room_version")
+    implementation("androidx.room:room-runtime:2.6.1")
+    implementation("androidx.room:room-ktx:2.6.1")
+    kapt("androidx.room:room-compiler:2.6.1")
 
     // ML Kit Text Recognition (El Ojo: Visión Offline para Capturas de Pantalla)
     implementation("com.google.mlkit:text-recognition:16.0.0")
