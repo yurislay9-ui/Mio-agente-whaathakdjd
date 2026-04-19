@@ -60,8 +60,8 @@ android {
     buildFeatures {
         compose = true
     }
-    composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.0"
+composeOptions {
+    kotlinCompilerExtensionVersion = "1.5.11"
     }
     
     // Deshabilitar detector AutoboxingStateCreation que causa fallos en Lint con Compose
