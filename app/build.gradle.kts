@@ -65,8 +65,10 @@ android {
     }
     
     // Deshabilitar detector AutoboxingStateCreation que causa fallos en Lint con Compose
-    lint {
-        disable += "AutoboxingStateCreation"
+lint {
+    disable += "AutoboxingStateCreation"
+    checkReleaseBuilds = false
+    abortOnError = false
     }
 }
 

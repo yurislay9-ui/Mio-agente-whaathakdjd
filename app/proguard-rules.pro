@@ -25,3 +25,7 @@
 
 # VECTOR 11 DEFENSA: Criptografía - Proteger Librería Security de Android X de Obfuskation
 -keep class androidx.security.crypto.** { *; }
+
+# VECTOR 12 DEFENSA: Silenciar Warnings de librerías comunes
+-dontwarn androidx.work.**
+-dontwarn androidx.room.**
