@@ -155,8 +155,8 @@ object Orchestrator {
             val sharedPrefs = globalContext.getSharedPreferences("sponsorflow_settings", Context.MODE_PRIVATE)
             val templateAlmacen = sharedPrefs.getString("provider_template", "Nombre: {nombre}\nProducto: {producto}\nDireccion: {direccion}") ?: ""
             
-            // 4. Inferencia Central Llama
-            fullResponse = LlamaEngine.thinkAndReply(rawSender, processedText, catalogContextString, templateAlmacen)
+// 4. Inferencia Central Llama
+fullResponse = LlamaEngine.thinkAndReply(rawSender, processedText, catalogContextString)
             
             Log.d(TAG, "🔓 Liberando Mutex Neural")
         } // FIN ZONA CERRADA
