@@ -29,3 +29,12 @@
 # VECTOR 12 DEFENSA: Silenciar Warnings de librerías comunes
 -dontwarn androidx.work.**
 -dontwarn androidx.room.**
+-dontwarn androidx.lifecycle.**
+-dontwarn com.google.android.gms.**
+-dontwarn android.support.**
+-dontwarn com.google.android.vending.**
+-dontwarn kotlinx.coroutines.**
+-dontwarn androidx.compose.ui.**
+-dontwarn androidx.versionedparcelable.**
+-dontwarn com.google.firebase.**
+-dontwarn androidx.startup.**
