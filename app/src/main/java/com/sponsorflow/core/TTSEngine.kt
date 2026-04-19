@@ -14,7 +14,9 @@ import java.util.Locale
  * Atiende a tu petición: "alguien que lea audios y HAGA AUDIOS".
  */
 class TTSEngine(private val context: Context) : TextToSpeech.OnInitListener {
-    private const val TAG = "NEXUS_TTS"
+    companion object {
+        private const val TAG = "NEXUS_TTS"
+    }
     private var tts: TextToSpeech? = null
     private var isInitialized = CompletableDeferred<Boolean>()
 

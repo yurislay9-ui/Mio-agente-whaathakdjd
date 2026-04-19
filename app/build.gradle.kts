@@ -1,7 +1,7 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
-    id("kotlin-kapt") // Procesador de anotaciones nativo para Room DB
+    id("com.google.devtools.ksp") version "2.0.20-1.0.24" // Reemplazo moderno de Kapt para Kotlin 2.0
     id("org.jetbrains.kotlin.plugin.compose")
 }
 
@@ -81,7 +81,7 @@ dependencies {
     // Room Database (La Memoria y Catálogo SQLite)
     implementation("androidx.room:room-runtime:2.6.1")
     implementation("androidx.room:room-ktx:2.6.1")
-    kapt("androidx.room:room-compiler:2.6.1")
+    ksp("androidx.room:room-compiler:2.6.1")
 
     // ML Kit Text Recognition (El Ojo: Visión Offline para Capturas de Pantalla)
     implementation("com.google.mlkit:text-recognition:16.0.0")
@@ -93,7 +93,7 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.2")
 
     // Jetpack Security: Cifrado AES-256 anclado al Hardware Keystore para Anti-Piratería
-    implementation("androidx.security:security-crypto:1.0.0")
+    implementation("androidx.security:security-crypto:1.1.0-alpha06")
     
     // VECTOR 14 DEFENSA: WorkManager para el ResurrectorWorker
     implementation("androidx.work:work-runtime-ktx:2.9.0")

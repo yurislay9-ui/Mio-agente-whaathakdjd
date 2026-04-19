@@ -6,6 +6,7 @@ import android.provider.Settings
 import android.security.keystore.KeyGenParameterSpec
 import android.security.keystore.KeyProperties
 import android.security.keystore.StrongBoxUnavailableException
+import android.content.SharedPreferences
 import android.util.Log
 import androidx.security.crypto.EncryptedSharedPreferences
 import androidx.security.crypto.MasterKey
@@ -31,13 +32,15 @@ class SecurityVault(private val context: Context) {
         .build()
 
     // 2. EncryptedSharedPreferences: Imposible de leer en texto plano en caso de extracción Root
-    private val prefs = EncryptedSharedPreferences.create(
-        context,
-        "sponsorflow_vault_secure",
-        masterKey,
-        EncryptedSharedPreferences.PrefKeyEncryptionScheme.AES256_SIV,
-        EncryptedSharedPreferences.PrefValueEncryptionScheme.AES256_GCM
-    )
+    private val prefs: SharedPreferences by lazy {
+        EncryptedSharedPreferences.create(
+            context,
+            "sponsorflow_vault_secure",
+            masterKey,
+            EncryptedSharedPreferences.PrefKeyEncryptionScheme.AES256_SIV,
+            EncryptedSharedPreferences.PrefValueEncryptionScheme.AES256_GCM
+        )!!
+    }
     
     companion object {
         const val KEY_LICENSE_END_DATE = "license_end_date_ms"
