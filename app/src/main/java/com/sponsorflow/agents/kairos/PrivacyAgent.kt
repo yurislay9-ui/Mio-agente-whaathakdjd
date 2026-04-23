@@ -10,6 +10,7 @@ import com.sponsorflow.models.SwarmError
 import com.sponsorflow.models.SwarmResult
 import com.sponsorflow.models.SwarmTask
 
+import javax.inject.Inject
 data class PrivacyPayload(val originalText: String) : AgentPayload
 
 data class PrivacyData(
@@ -26,7 +27,6 @@ data class PrivacyData(
  * (Personally Identifiable Information) como tarjetas de crédito o correos,
  * ANTES de que el enjambre o la base de datos los procesen.
  */
-import javax.inject.Inject
 
 class PrivacyAgent @Inject constructor() : TypedSponsorflowAgent<PrivacyPayload, PrivacyData>() {
     private const val TAG = "NEXUS_PrivacyAgent"

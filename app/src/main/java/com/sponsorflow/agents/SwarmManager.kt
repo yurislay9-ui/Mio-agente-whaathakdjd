@@ -32,6 +32,8 @@ import kotlinx.coroutines.channels.ReceiveChannel
 import kotlinx.coroutines.channels.produce
 import java.util.UUID
 
+import javax.inject.Inject
+import javax.inject.Singleton
 /**
  * Evento de trazabilidad en tiempo real para Observabilidad (El "Radar" del Swarm).
  */
@@ -66,8 +68,6 @@ data class SwarmExecutionContext(
     var selectedAction: com.sponsorflow.models.ActionIntent? = null
 )
 
-import javax.inject.Inject
-import javax.inject.Singleton
 
 /**
  * [ACTUALIZACIÓN 2026 - SWARM OMNICANAL REACCTIVO (DI HILT)]

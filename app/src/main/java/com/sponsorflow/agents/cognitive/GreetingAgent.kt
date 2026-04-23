@@ -9,6 +9,7 @@ import com.sponsorflow.models.SwarmError
 import com.sponsorflow.models.SwarmResult
 import com.sponsorflow.models.SwarmTask
 
+import javax.inject.Inject
 data class GreetingPayload(val unused: Unit = Unit) : AgentPayload
 
 data class GreetingData(val rawTemplates: List<String>) : AgentResponseData
@@ -21,7 +22,6 @@ data class GreetingData(val rawTemplates: List<String>) : AgentResponseData
  * cuando el usuario no ha especificado una intención clara de compra.
  * Cero consumo de BD, respuestas en < 1 milisegundo.
  */
-import javax.inject.Inject
 
 class GreetingAgent @Inject constructor() : TypedSponsorflowAgent<GreetingPayload, GreetingData>() {
     override val agentName: String = "GreetingAgent"

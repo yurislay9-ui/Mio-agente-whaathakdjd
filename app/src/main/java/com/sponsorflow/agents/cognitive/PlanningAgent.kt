@@ -13,6 +13,7 @@ import com.sponsorflow.models.SwarmTask
 import org.json.JSONArray
 import org.json.JSONObject
 
+import javax.inject.Inject
 data class PlanningPayload(val userInput: String) : AgentPayload
 
 data class PlanningData(
@@ -29,7 +30,6 @@ data class PlanningData(
  * un plan secuencial de acciones (Array estructurado). Este agente NO ejecuta,
  * solo estructura el trabajo para que el Músculo (Motor V4.0) actúe.
  */
-import javax.inject.Inject
 
 class PlanningAgent @Inject constructor() : TypedSponsorflowAgent<PlanningPayload, PlanningData>() {
     private const val TAG = "NEXUS_PlanningAgent"

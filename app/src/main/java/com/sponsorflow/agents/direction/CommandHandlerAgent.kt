@@ -11,6 +11,7 @@ import com.sponsorflow.models.SwarmError
 import com.sponsorflow.models.SwarmResult
 import com.sponsorflow.models.SwarmTask
 
+import javax.inject.Inject
 data class CommandHandlerPayload(
     val rawCommand: String
 ) : AgentPayload
@@ -29,7 +30,6 @@ data class CommandHandlerData(
  * por el dueño del dispositivo o por subsistemas internos (como el RetargetingAgent).
  * Traduce estos comandos de alto nivel a instrucciones biomecánicas para la Mano Fantasma.
  */
-import javax.inject.Inject
 
 class CommandHandlerAgent @Inject constructor() : TypedSponsorflowAgent<CommandHandlerPayload, CommandHandlerData>() {
     private const val TAG = "NEXUS_CommandHandler"

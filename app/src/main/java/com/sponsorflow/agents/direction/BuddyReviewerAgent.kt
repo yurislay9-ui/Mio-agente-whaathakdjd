@@ -11,6 +11,7 @@ import com.sponsorflow.models.SwarmError
 import com.sponsorflow.models.SwarmResult
 import com.sponsorflow.models.SwarmTask
 
+import javax.inject.Inject
 data class BuddyReviewerPayload(
     val clientName: String,
     val hasGeneratedImage: Boolean,
@@ -30,7 +31,6 @@ data class BuddyReviewerData(
  * Basado en el Pilar 10 de CLAW-LITE: "Dos cerebros, una mente".
  * Analiza la respuesta final del Synthesizer ANTES de que el teléfono la envíe.
  */
-import javax.inject.Inject
 
 class BuddyReviewerAgent @Inject constructor() : TypedSponsorflowAgent<BuddyReviewerPayload, BuddyReviewerData>() {
     private const val TAG = "NEXUS_BuddyReviewer"

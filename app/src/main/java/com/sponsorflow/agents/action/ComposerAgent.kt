@@ -18,6 +18,7 @@ import com.sponsorflow.models.SwarmTask
 import java.io.File
 import java.io.FileOutputStream
 
+import javax.inject.Inject
 data class ComposerPayload(
     val appContext: Context,
     val intentCategory: String?,
@@ -38,7 +39,6 @@ data class ComposerData(
  * Utiliza el Canvas nativo de Android. Consumo de RAM y CPU mínimo (milisegundos).
  * Ideal para adjuntar imágenes a las cotizaciones antes de pedir aprobación humana.
  */
-import javax.inject.Inject
 
 class ComposerAgent @Inject constructor() : TypedSponsorflowAgent<ComposerPayload, ComposerData>() {
     private const val TAG = "NEXUS_ComposerAgent"

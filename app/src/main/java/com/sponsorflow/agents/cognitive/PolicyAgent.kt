@@ -13,6 +13,7 @@ import com.sponsorflow.models.SwarmTask
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
+import javax.inject.Inject
 // 1. Contratos Estrictos
 data class PolicyPayload(
     val appContext: Context // Temporal as we will migrate to DI
@@ -30,7 +31,6 @@ data class PolicyData(
  * Accede a preferencias encriptadas para conocer tiempos de entrega, ubicación, etc.
  * Ya no es un `object`. Se prepara para recibir DB inyectado o SharedPreferences.
  */
-import javax.inject.Inject
 
 class PolicyAgent @Inject constructor() : TypedSponsorflowAgent<PolicyPayload, PolicyData>() {
     private const val TAG = "NEXUS_PolicyAgent"
