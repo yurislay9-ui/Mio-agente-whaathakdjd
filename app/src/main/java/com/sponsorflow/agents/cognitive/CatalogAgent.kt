@@ -14,7 +14,6 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import kotlinx.coroutines.withTimeoutOrNull
 import android.content.Context
-import javax.inject.Inject
 
 // 1. Contratos Estrictos
 data class CatalogPayload(
@@ -32,6 +31,7 @@ data class CatalogData(val formattedCatalogString: String) : AgentResponseData
  * El único componente autorizado a leer la SQLite (Room) en busca de productos.
  * Ya no es un `object`. Se prepara para recibir DB inyectado (Por ahora la toma del payload context).
  */
+import javax.inject.Inject
 
 class CatalogAgent @Inject constructor() : TypedSponsorflowAgent<CatalogPayload, CatalogData>() {
     private const val TAG = "NEXUS_CatalogAgent"

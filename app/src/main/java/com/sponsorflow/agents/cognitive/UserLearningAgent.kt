@@ -10,7 +10,6 @@ import com.sponsorflow.models.SwarmError
 import com.sponsorflow.models.SwarmResult
 import com.sponsorflow.models.SwarmTask
 import java.util.Calendar
-import javax.inject.Inject
 
 data class UserLearningPayload(
     val inputText: String,
@@ -33,6 +32,7 @@ data class UserLearningData(
  * dinámicamente el comportamiento del bot según los hábitos del usuario,
  * SIN usar modelos pesados. Modela longitud, ritmo horario y estilo.
  */
+import javax.inject.Inject
 
 class UserLearningAgent @Inject constructor() : TypedSponsorflowAgent<UserLearningPayload, UserLearningData>() {
     private const val TAG = "NEXUS_LearningAgent"

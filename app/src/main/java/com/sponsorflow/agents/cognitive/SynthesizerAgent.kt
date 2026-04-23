@@ -14,7 +14,6 @@ import com.sponsorflow.models.SwarmError
 import com.sponsorflow.models.SwarmResult
 import com.sponsorflow.models.SwarmTask
 import kotlin.random.Random
-import javax.inject.Inject
 
 data class SynthesizerPayload(
     val collectedData: Map<String, Any>
@@ -33,6 +32,7 @@ data class SynthesizerData(
  * Re-ingeniería Mythos v4.0: Integra Self-Refining Reasoning.
  * Usa FSMDatabase para un ensamblaje matricial O(1) extremo, sin bloques if/else pesados.
  */
+import javax.inject.Inject
 
 class SynthesizerAgent @Inject constructor() : TypedSponsorflowAgent<SynthesizerPayload, SynthesizerData>() {
     private const val TAG = "NEXUS_Synthesizer"

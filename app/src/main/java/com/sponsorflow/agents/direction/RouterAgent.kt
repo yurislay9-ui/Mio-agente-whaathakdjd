@@ -11,7 +11,6 @@ import com.sponsorflow.models.SquadType
 import com.sponsorflow.models.SwarmError
 import com.sponsorflow.models.SwarmResult
 import com.sponsorflow.models.SwarmTask
-import javax.inject.Inject
 
 data class RouterPayload(
     val inputText: String,
@@ -32,6 +31,7 @@ data class RouterData(
  * Actualizado a Mythos v4.0. Ya no adivina palabras, invoca al 
  * HybridIntentEngine (Regex -> Fuzzy -> Semántico).
  */
+import javax.inject.Inject
 
 class RouterAgent @Inject constructor(
     private val hybridIntentEngine: HybridIntentEngine

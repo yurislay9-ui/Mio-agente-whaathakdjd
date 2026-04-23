@@ -9,7 +9,6 @@ import com.sponsorflow.models.SwarmError
 import com.sponsorflow.models.SwarmResult
 import com.sponsorflow.models.SwarmTask
 import com.sponsorflow.models.AgentTask
-import javax.inject.Inject
 
 // 1. Contratos Estrictos
 data class OrderParsingPayload(val textToAnalyze: String) : AgentPayload
@@ -28,6 +27,7 @@ data class OrderParsingData(
  * Reemplaza la antigua extracción de pedidos por lógica heurística.
  * Ya no es un `object` Singleton, ahora es instanciable para evitar Memory Leaks.
  */
+import javax.inject.Inject
 
 class OrderParsingAgent @Inject constructor() : TypedSponsorflowAgent<OrderParsingPayload, OrderParsingData>() {
     private const val TAG = "NEXUS_OrderParsingAgent"
