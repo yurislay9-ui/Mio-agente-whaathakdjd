@@ -33,7 +33,7 @@ data class BuddyReviewerData(
  */
 
 class BuddyReviewerAgent @Inject constructor() : TypedSponsorflowAgent<BuddyReviewerPayload, BuddyReviewerData>() {
-    private const val TAG = "NEXUS_BuddyReviewer"
+    private val TAG = "NEXUS_BuddyReviewer"
 
     override val agentName: String = "BuddyReviewerAgent"
     override val squadron: SquadType = SquadType.DIRECTION

@@ -106,8 +106,8 @@ data class SwarmMetadata(
 }
 
 // 1. Contratos de Datos Seguros (Reemplazo de Map<String, Any>)
-sealed interface AgentPayload
-sealed interface AgentResponseData
+interface AgentPayload
+interface AgentResponseData
 
 // 2. Errores de Negocio Estrictos (Sin Throwables)
 sealed interface SwarmError {
@@ -128,7 +128,7 @@ sealed interface SwarmResult<out D : AgentResponseData, out E : SwarmError> {
     data class NeedsReview<out E : SwarmError>(val error: E) : SwarmResult<Nothing, E>
 
     // Función encadenable monádica
-    inline fun <R> fold(
+    fun <R> fold(
         onSuccess: (D, Double) -> R,
         onFailure: (E) -> R,
         onReview: (E) -> R

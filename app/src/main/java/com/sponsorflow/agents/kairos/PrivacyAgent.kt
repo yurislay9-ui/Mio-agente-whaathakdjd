@@ -29,7 +29,7 @@ data class PrivacyData(
  */
 
 class PrivacyAgent @Inject constructor() : TypedSponsorflowAgent<PrivacyPayload, PrivacyData>() {
-    private const val TAG = "NEXUS_PrivacyAgent"
+    private val TAG = "NEXUS_PrivacyAgent"
     
     override val agentName: String = "PrivacyAgent"
     override val squadron: SquadType = SquadType.KAIROS

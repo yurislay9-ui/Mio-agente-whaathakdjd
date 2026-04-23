@@ -19,7 +19,7 @@ import javax.inject.Inject
  * basura antiguo para mantener la app ultra rápida y liviana (< 50MB Database).
  */
 class MemoryAgent @Inject constructor() : SponsorflowAgent {
-    private const val TAG = "NEXUS_MemoryAgent"
+    private val TAG = "NEXUS_MemoryAgent"
     
     override val agentName: String = "MemoryAgent"
     override val squadron: SquadType = SquadType.KAIROS

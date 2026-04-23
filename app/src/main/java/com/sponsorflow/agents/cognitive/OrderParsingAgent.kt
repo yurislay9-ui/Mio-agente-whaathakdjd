@@ -30,7 +30,7 @@ data class OrderParsingData(
  */
 
 class OrderParsingAgent @Inject constructor() : TypedSponsorflowAgent<OrderParsingPayload, OrderParsingData>() {
-    private const val TAG = "NEXUS_OrderParsingAgent"
+    private val TAG = "NEXUS_OrderParsingAgent"
     
     override val agentName: String = "OrderParsingAgent"
     override val squadron: SquadType = SquadType.COGNITIVE

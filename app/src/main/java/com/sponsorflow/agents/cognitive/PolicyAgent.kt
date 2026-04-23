@@ -33,7 +33,7 @@ data class PolicyData(
  */
 
 class PolicyAgent @Inject constructor() : TypedSponsorflowAgent<PolicyPayload, PolicyData>() {
-    private const val TAG = "NEXUS_PolicyAgent"
+    private val TAG = "NEXUS_PolicyAgent"
     override val agentName: String = "PolicyAgent"
     override val squadron: SquadType = SquadType.COGNITIVE
     override val capabilities: List<String> = listOf("business_rules", "shipping_info", "schedule")

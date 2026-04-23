@@ -35,7 +35,7 @@ data class SynthesizerData(
  */
 
 class SynthesizerAgent @Inject constructor() : TypedSponsorflowAgent<SynthesizerPayload, SynthesizerData>() {
-    private const val TAG = "NEXUS_Synthesizer"
+    private val TAG = "NEXUS_Synthesizer"
     override val agentName: String = "SynthesizerAgent"
     override val squadron: SquadType = SquadType.COGNITIVE
     override val capabilities: List<String> = listOf("response_generation", "adaptive_thinking", "fsm_tonal_matching")

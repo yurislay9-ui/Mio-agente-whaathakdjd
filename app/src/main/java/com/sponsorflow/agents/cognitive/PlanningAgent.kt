@@ -32,7 +32,7 @@ data class PlanningData(
  */
 
 class PlanningAgent @Inject constructor() : TypedSponsorflowAgent<PlanningPayload, PlanningData>() {
-    private const val TAG = "NEXUS_PlanningAgent"
+    private val TAG = "NEXUS_PlanningAgent"
     
     override val agentName: String = "PlanningAgent"
     override val squadron: SquadType = SquadType.COGNITIVE

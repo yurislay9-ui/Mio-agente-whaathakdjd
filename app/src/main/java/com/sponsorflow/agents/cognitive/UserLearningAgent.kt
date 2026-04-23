@@ -35,7 +35,7 @@ data class UserLearningData(
  */
 
 class UserLearningAgent @Inject constructor() : TypedSponsorflowAgent<UserLearningPayload, UserLearningData>() {
-    private const val TAG = "NEXUS_LearningAgent"
+    private val TAG = "NEXUS_LearningAgent"
     
     override val agentName: String = "UserLearningAgent"
     override val squadron: SquadType = SquadType.COGNITIVE

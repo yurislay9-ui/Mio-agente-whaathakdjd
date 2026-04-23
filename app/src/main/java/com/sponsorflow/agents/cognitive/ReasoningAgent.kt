@@ -33,7 +33,7 @@ data class ReasoningData(
  */
 
 class ReasoningAgent @Inject constructor() : TypedSponsorflowAgent<ReasoningPayload, ReasoningData>() {
-    private const val TAG = "NEXUS_ReasoningAgent"
+    private val TAG = "NEXUS_ReasoningAgent"
     
     override val agentName: String = "ReasoningAgent"
     override val squadron: SquadType = SquadType.COGNITIVE

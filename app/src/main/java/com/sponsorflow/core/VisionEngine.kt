@@ -14,7 +14,7 @@ import kotlinx.coroutines.tasks.await
  * Extrae el texto offline en milisegundos sin consumir RAM excesiva.
  */
 object VisionEngine {
-    private const val TAG = "NEXUS_Vision"
+    private val TAG = "NEXUS_Vision"
     private val recognizer = TextRecognition.getClient(TextRecognizerOptions.DEFAULT_OPTIONS)
 
     suspend fun extractTextFromImage(context: Context, imageUri: Uri): String {

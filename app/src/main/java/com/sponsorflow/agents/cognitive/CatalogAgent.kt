@@ -34,7 +34,7 @@ data class CatalogData(val formattedCatalogString: String) : AgentResponseData
  */
 
 class CatalogAgent @Inject constructor() : TypedSponsorflowAgent<CatalogPayload, CatalogData>() {
-    private const val TAG = "NEXUS_CatalogAgent"
+    private val TAG = "NEXUS_CatalogAgent"
     override val agentName: String = "CatalogAgent"
     override val squadron: SquadType = SquadType.COGNITIVE
     override val capabilities: List<String> = listOf("product_search", "price_check", "stock_check")

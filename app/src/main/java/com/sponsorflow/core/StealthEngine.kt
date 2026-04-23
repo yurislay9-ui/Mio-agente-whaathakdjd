@@ -10,7 +10,7 @@ import kotlin.random.Random
  * Protege el número de WhatsApp de los radares de bots de Meta.
  */
 object StealthEngine {
-    private const val TAG = "NEXUS_Stealth"
+    private val TAG = "NEXUS_Stealth"
 
     /**
      * Define si el bot debería estar inactivo para simular que el dueño está durmiendo.

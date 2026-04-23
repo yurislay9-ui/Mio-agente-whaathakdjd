@@ -19,7 +19,7 @@ import javax.inject.Inject
  * Es un agente seguro contra fallos del Sistema Operativo.
  */
 class PublisherAgent @Inject constructor() : SponsorflowAgent {
-    private const val TAG = "NEXUS_PublisherAgent"
+    private val TAG = "NEXUS_PublisherAgent"
     
     override val agentName: String = "PublisherAgent"
     override val squadron: SquadType = SquadType.ACTION

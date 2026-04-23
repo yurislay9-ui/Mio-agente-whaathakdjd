@@ -34,7 +34,7 @@ data class BehaviorData(
  */
 
 class BehaviorSimulationAgent @Inject constructor() : TypedSponsorflowAgent<BehaviorPayload, BehaviorData>() {
-    private const val TAG = "NEXUS_BehaviorAgent"
+    private val TAG = "NEXUS_BehaviorAgent"
 
     override val agentName: String = "BehaviorSimulationAgent"
     override val squadron: SquadType = SquadType.ACTION

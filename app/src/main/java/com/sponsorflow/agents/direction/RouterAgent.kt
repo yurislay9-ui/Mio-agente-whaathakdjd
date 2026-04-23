@@ -36,7 +36,7 @@ data class RouterData(
 class RouterAgent @Inject constructor(
     private val hybridIntentEngine: HybridIntentEngine
 ) : TypedSponsorflowAgent<RouterPayload, RouterData>() {
-    private const val TAG = "NEXUS_RouterAgent"
+    private val TAG = "NEXUS_RouterAgent"
 
     override val agentName: String = "RouterAgent"
     override val squadron: SquadType = SquadType.DIRECTION

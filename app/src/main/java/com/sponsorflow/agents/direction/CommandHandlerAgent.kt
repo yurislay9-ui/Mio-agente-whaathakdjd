@@ -32,7 +32,7 @@ data class CommandHandlerData(
  */
 
 class CommandHandlerAgent @Inject constructor() : TypedSponsorflowAgent<CommandHandlerPayload, CommandHandlerData>() {
-    private const val TAG = "NEXUS_CommandHandler"
+    private val TAG = "NEXUS_CommandHandler"
 
     override val agentName: String = "CommandHandlerAgent"
     override val squadron: SquadType = SquadType.DIRECTION

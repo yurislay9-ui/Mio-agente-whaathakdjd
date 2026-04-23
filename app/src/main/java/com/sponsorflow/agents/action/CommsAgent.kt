@@ -39,7 +39,7 @@ data class CommsData(
  */
 
 class CommsAgent @Inject constructor() : TypedSponsorflowAgent<CommsPayload, CommsData>() {
-    private const val TAG = "NEXUS_CommsAgent"
+    private val TAG = "NEXUS_CommsAgent"
     
     override val agentName: String = "CommsAgent"
     override val squadron: SquadType = SquadType.ACTION

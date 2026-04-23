@@ -41,7 +41,7 @@ data class ComposerData(
  */
 
 class ComposerAgent @Inject constructor() : TypedSponsorflowAgent<ComposerPayload, ComposerData>() {
-    private const val TAG = "NEXUS_ComposerAgent"
+    private val TAG = "NEXUS_ComposerAgent"
 
     override val agentName: String = "ComposerAgent"
     override val squadron: SquadType = SquadType.ACTION

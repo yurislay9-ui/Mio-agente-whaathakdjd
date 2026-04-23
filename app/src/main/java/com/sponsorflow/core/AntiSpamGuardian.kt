@@ -14,7 +14,7 @@ import javax.inject.Singleton
 class AntiSpamGuardian @Inject constructor(
     private val hybridIntentEngine: HybridIntentEngine
 ) {
-    private const val TAG = "NEXUS_AntiSpam"
+    private val TAG = "NEXUS_AntiSpam"
     
     // Memoria volátil de interacciones temporales: Mapea SenderID -> Lista de Timestamps
     private val interactionHistory = mutableMapOf<String, MutableList<Long>>()

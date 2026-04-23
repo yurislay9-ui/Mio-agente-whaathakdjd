@@ -19,7 +19,7 @@ import kotlin.math.sqrt
  * comparaciones de "Significado Matemático" y detectar el nivel de estrés/tono del cliente.
  */
 class ONNXSemanticEngine(private val context: Context) {
-    private const val TAG = "NEXUS_ONNX_Engine"
+    private val TAG = "NEXUS_ONNX_Engine"
     
     private var env: OrtEnvironment? = null
     private var session: OrtSession? = null

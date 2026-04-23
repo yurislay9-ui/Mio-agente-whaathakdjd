@@ -113,7 +113,7 @@ class HybridIntentEngine @Inject constructor(
 ) : CognitiveEngine<IntentAnalysisResult> {
     override val engineName: String = "HybridIntentEngine"
     
-    private const val TAG = "NEXUS_HybridEngine"
+    private val TAG = "NEXUS_HybridEngine"
     
     // LRU Cache Absoluto para intenciones repetitivas (e.g., "Hola", "precio")
     private val intentCache = object : java.util.LinkedHashMap<String, IntentAnalysisResult>(100, 0.75f, true) {
