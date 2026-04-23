@@ -10,6 +10,7 @@ import com.sponsorflow.models.SquadType
 import com.sponsorflow.models.SwarmError
 import com.sponsorflow.models.SwarmResult
 import com.sponsorflow.models.SwarmTask
+import javax.inject.Inject
 
 data class ReasoningPayload(
     val previousError: String,
@@ -30,7 +31,6 @@ data class ReasoningData(
  * pre-establecido falla (ej. cambió la UI, el botón no existe, el flujo se cortó).
  * Lee el estado actual del árbol de nodos de pantalla y razona una solución.
  */
-import javax.inject.Inject
 
 class ReasoningAgent @Inject constructor() : TypedSponsorflowAgent<ReasoningPayload, ReasoningData>() {
     private const val TAG = "NEXUS_ReasoningAgent"

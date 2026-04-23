@@ -18,6 +18,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.withContext
 import java.util.concurrent.ConcurrentHashMap
+import javax.inject.Inject
 
 data class CommsPayload(
     val textToSend: String?,
@@ -36,7 +37,6 @@ data class CommsData(
  * Responsable de la entrega física del texto hacia WhatsApp/Instagram.
  * Incluye un Throttler (Regulador de Peticiones) para evitar el baneo de las cuentas por SPAM.
  */
-import javax.inject.Inject
 
 class CommsAgent @Inject constructor() : TypedSponsorflowAgent<CommsPayload, CommsData>() {
     private const val TAG = "NEXUS_CommsAgent"

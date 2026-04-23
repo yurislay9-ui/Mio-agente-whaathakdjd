@@ -12,6 +12,7 @@ import com.sponsorflow.models.SwarmTask
 import kotlinx.coroutines.delay
 import kotlin.random.Random
 import java.util.Calendar
+import javax.inject.Inject
 
 data class BehaviorPayload(
     val inputLength: Int,
@@ -31,7 +32,6 @@ data class BehaviorData(
  * Simula de forma imperceptible los patrones erráticos humanos (delays matemáticos,
  * pausas lógicas, backoffs dinámicos) y orquesta la desvinculación a nivel de sistema.
  */
-import javax.inject.Inject
 
 class BehaviorSimulationAgent @Inject constructor() : TypedSponsorflowAgent<BehaviorPayload, BehaviorData>() {
     private const val TAG = "NEXUS_BehaviorAgent"
