@@ -7,7 +7,7 @@ package com.sponsorflow.utils
  */
 object ClickDebouncer {
     private var lastClickTime: Long = 0
-    private const val DEBOUNCE_DELAY_MS = 1500L // 1.5 segundos de "cooldown" visual
+    private val DEBOUNCE_DELAY_MS = 1500L // 1.5 segundos de "cooldown" visual
     
     // Método para uso en interfaces Compose y Android puro
     @Synchronized

@@ -9,7 +9,7 @@ import org.json.JSONObject
  */
 object DataSanitizer {
 
-    private const val TAG = "NEXUS_Sanitizer"
+    private val TAG = "NEXUS_Sanitizer"
 
     data class ParsedSender(val platform: String, val clientId: String)
 

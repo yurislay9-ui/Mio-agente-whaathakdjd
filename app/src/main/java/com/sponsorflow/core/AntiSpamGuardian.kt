@@ -20,9 +20,9 @@ class AntiSpamGuardian @Inject constructor(
     private val interactionHistory = mutableMapOf<String, MutableList<Long>>()
     
     // Reglas paramétricas del Escudo
-    private const val COOLDOWN_MS = 2500L // 2.5 segundos mínimo entre mensajes para simular ser humano
-    private const val MAX_MSGS_PER_MINUTE = 6 // Máximo 6 interacciones por minuto
-    private const val PENALTY_BOX_MS = 60000L * 5 // 5 minutos de castigo (Caja de arena) si hace spam
+    private val COOLDOWN_MS = 2500L // 2.5 segundos mínimo entre mensajes para simular ser humano
+    private val MAX_MSGS_PER_MINUTE = 6 // Máximo 6 interacciones por minuto
+    private val PENALTY_BOX_MS = 60000L * 5 // 5 minutos de castigo (Caja de arena) si hace spam
 
     private val penaltyBox = mutableMapOf<String, Long>()
 

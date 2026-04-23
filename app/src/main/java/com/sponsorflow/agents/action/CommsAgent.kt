@@ -48,7 +48,7 @@ class CommsAgent @Inject constructor() : TypedSponsorflowAgent<CommsPayload, Com
     companion object {
         // Memoria volátil para Anti-Spam (Compartida globalmente entre peticiones).
         private val messageThrottler = ConcurrentHashMap<String, Long>()
-        private const val MIN_DELAY_BETWEEN_REPLIES_MS = 5000L
+        private val MIN_DELAY_BETWEEN_REPLIES_MS = 5000L
     }
 
     override fun mapLegacyTaskToPayload(task: AgentTask): CommsPayload {

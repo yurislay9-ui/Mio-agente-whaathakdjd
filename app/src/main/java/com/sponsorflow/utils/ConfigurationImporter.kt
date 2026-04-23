@@ -11,8 +11,8 @@ import java.security.MessageDigest
  * inyectarlos a la base de datos o preferencias locales.
  */
 object ConfigurationImporter {
-    private const val TAG = "NEXUS_ConfigImport"
-    private const val CURRENT_VERSION_CODE = "v4.0" // Solo aceptamos backups generados por la v4.0
+    private val TAG = "NEXUS_ConfigImport"
+    private val CURRENT_VERSION_CODE = "v4.0" // Solo aceptamos backups generados por la v4.0
 
     class ImportException(message: String) : Exception(message)
 

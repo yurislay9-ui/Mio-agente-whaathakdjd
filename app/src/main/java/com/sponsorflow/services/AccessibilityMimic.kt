@@ -29,7 +29,7 @@ class AccessibilityMimic : AccessibilityService() {
 
         // SRE Guard: Graceful degradation variables
         private var targetStartTime: Long = 0L
-        private const val TIMEOUT_MS = 10000L // 10 segundos máximo buscando el botón
+        private val TIMEOUT_MS = 10000L // 10 segundos máximo buscando el botón
     }
 
     override fun onServiceConnected() {
